@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ecf0f3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+    margin: 0;
+}
+
+.container {
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 lightgrey;
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0;
+    z-index: 5;
+    box-shadow: 4px 4px 7px #cbced1,
+              -4px -4px 7px #ffffff;
+    height: 200px;
+    
+}
+
+
+
+.img {
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    
+    box-shadow: 
+    0px 0px 2px #5f5f5f,
+    /* offset */
+    0px 0px 0px 5px #ecf0f3,
+    /*bottom right */
+    8px 8px 15px #a7aaaf,
+    /* top left */
+    -8px -8px 15px #ffffff
+  ;
+     
+}
+
+
+
+.img img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: inherit;
+    height: inherit;
+     
+    bottom:0;
+    left: 0;
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+   
+}
+
+.container.play .img img {
+    animation-play-state: running;
+
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin-left:15px
+}
+
+.action-btn {
+    background-color: #ecf0f3;
+    border: 0;
+    color:#dfdbdf;
+    box-shadow: 4px 4px 7px #cbced1,
+              -4px -4px 7px #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0px 20px;
+    font-size: 20px;
+
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.action-btn-big:focus {
+    outline: 0;
+}
+
+.action-btn-big {
+    background-color: #ecf0f3;
+    border: 0;
+    color:#dfdbdf;
+    box-shadow: 4px 4px 7px #cbced1,
+              -4px -4px 7px #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0px 20px;   
+    font-size: 35px;
+}
+
+.info h4 {
+    margin: 0;
+}
+
+.info {
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    z-index: 2;
+    width: calc(100%-40px);
+    padding: 10px 10px 10px 150px;
+    top: 0;
+    left: 20px;
+    opacity: 1;
+}
+
+
+
+.progress-bar {
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0px;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background-color: red;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear
+}
+
+
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
