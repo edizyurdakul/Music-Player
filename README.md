@@ -9,3 +9,5 @@
 # Live Demo
 
 https://edizyurdakul.github.io/Music-Player/
+
+![Music Player Image](https://github.com/edizyurdakul/Music-Player/blob/master/images/image.png?raw=true)
